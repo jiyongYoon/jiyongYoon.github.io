@@ -1,10 +1,5 @@
-# main links
 main:
    - title: "Category"
-     url: /categories/
-  # - title: "Sample Posts"
-  #   url: /year-archive/
-  # - title: "Sample Collections"
-  #   url: /collection-archive/
-  # - title: "Sitemap"
-  #   url: /sitemap/
+   - url: /categories/
+
+    url: /categories/
