@@ -21,7 +21,7 @@ title_separator          : "-"
 subtitle                 : # site tagline that appears below site title in masthead
 name                     : "jyyoon"
 description              : "백엔드 개발자가 되기 위한 몸부림을 기록한 사이트입니다."
-url                      : "https://jiyongYoon.github.io"
+url                      : "https://jiyongyoon.github.io"
 baseurl                  : # the subpath of your site, e.g. "/blog"
 repository               : "jiyongYoon/jiyongYoon.github.io"
 teaser                   : # path of fallback teaser image, e.g. "/assets/images/500x300.png"
