@@ -96,7 +96,7 @@ analytics:
 # Site Author
 author:
   name             : "jyyoon"
-  avatar           : # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
+  avatar           : "/assets/images/jy.png"
   bio              : "I'll be an **amazing** developer."
   location         : "Republic of Korea"
   email            :
