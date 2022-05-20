@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 ---
 published: true
 layout: single
@@ -17,3 +18,17 @@ public class Test{
 }
 ```
 
+=======
+# 코드업로드 방법
+
+" ``` "후에 java를 입력하면 이렇게 자바를 입력할 수 있는 창이 나온다.
+
+```java
+public class Test{
+    public static void main(String[] args) {
+    	System.out.println("Hello, Github-Blog!");
+    }
+}
+```
+
+>>>>>>> 4a28996be2af29b383d4185c34aa4c9af68d3b90
