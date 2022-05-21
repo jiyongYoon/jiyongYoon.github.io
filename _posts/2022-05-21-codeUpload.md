@@ -1,7 +1,7 @@
 ---
 layout: single
 title: "코드 업로드 방법 테스트중!"
-categories: coding
+categories: github_blog
 ---
 
 # 코드업로드 방법
