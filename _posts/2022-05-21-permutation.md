@@ -1,7 +1,7 @@
 ---
 title: "순열"
 layout: single
-categoies: algorithm
+categories: math&algorithm
 ---
 
 # 순열
