@@ -5,7 +5,7 @@ categories: diary
 typora-copy-images-to: ..\images\2022-05-31
 ---
 
-# (백엔드 부트캠프)제로베이스 백엔드 스쿨
+# 백엔드 부트캠프-제로베이스 백엔드 스쿨
 
 ------
 
