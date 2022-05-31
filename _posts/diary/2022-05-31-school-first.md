@@ -69,7 +69,7 @@ typora-copy-images-to: ..\images\
 
 이 모든 조건을 만족하는 강의가 제가 현재 참여하고 있는 **제로베이스 백엔드 스쿨**이었습니다.
 
-[제로베이스 백엔드 스쿨]: https://zero-base.co.kr/
+[제로베이스 백엔드 스쿨]: https://zero-base.co.kr/	"제로베이스 백엔드 스쿨"
 
 
 
