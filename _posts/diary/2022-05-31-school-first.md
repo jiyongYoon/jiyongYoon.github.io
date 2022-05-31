@@ -2,8 +2,7 @@
 layout: single
 title: "백엔드 부트캠프-제로베이스 백엔드 스쿨"
 categories: diary
-typora-copy-images-to: ..\images\
-typora-root-url: ../
+typora-root-url: ..\images\2022-05-31
 ---
 
 # 백엔드 부트캠프-제로베이스 백엔드 스쿨
