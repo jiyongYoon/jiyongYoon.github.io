@@ -2,7 +2,7 @@
 layout: single
 title: "백엔드 부트캠프-제로베이스 백엔드 스쿨"
 categories: diary
-typora-root-url: ..\images\2022-05-31
+typora-root-url: ..\..\images\2022-05-31
 ---
 
 # 백엔드 부트캠프-제로베이스 백엔드 스쿨
@@ -63,7 +63,7 @@ typora-root-url: ..\images\2022-05-31
 
 학습 커리큘럼중에 정말 마음에 들었던 것이 '**코딩테스트**'와 '**컴퓨터 공학 수업**'이었습니다. 비전공자로서 부족한 부분을 만회할 수 있겠다고 생각했습니다.
 
-<img src="C:\Users\Yoon jiyong\Desktop\develop\github-blog\jiyongYoon.github.io\_posts\images\1.PNG" alt="1" style="zoom: 67%;" />
+<img src="..\..\images\1.PNG" alt="1" style="zoom: 67%;" />
 
 ------
 
@@ -85,7 +85,7 @@ typora-root-url: ..\images\2022-05-31
 
 현재 스터디 2개를 함께 진행하고 있으며, 슬랙 채널을 통해 잘 진행되고 있습니다.
 
-<img src="C:\Users\Yoon jiyong\Desktop\develop\github-blog\jiyongYoon.github.io\_posts\images\2 copy.png" alt="2 copy" style="zoom: 50%;" />
+<img src="..\..\images\2 copy.png" alt="2 copy" style="zoom: 50%;" />
 
 - **빠른 응답**
 
@@ -113,7 +113,7 @@ typora-root-url: ..\images\2022-05-31
 
 - 2번의 과제
 
-<img src="C:\Users\Yoon jiyong\Desktop\develop\github-blog\jiyongYoon.github.io\_posts\images\image-20220531013049700.png" alt="image-20220531013049700" style="zoom: 33%;" />
+<img src="..\..\images\image-20220531013049700.png" alt="image-20220531013049700" style="zoom: 33%;" />
 
 
 
@@ -129,7 +129,7 @@ typora-root-url: ..\images\2022-05-31
 
 1일 1커밋 목표로 5/9일 개강일부터 달리고 있습니다. 개발자로서의 역량중 하나인 '성실함'을 보여드리고 싶습니다.
 
-![3](C:\Users\Yoon jiyong\Desktop\develop\github-blog\jiyongYoon.github.io\_posts\images\3.PNG)
+![3](..\..\images\3.PNG)
 
 - **코딩테스트 만점**
 
