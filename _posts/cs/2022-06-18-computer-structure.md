@@ -15,7 +15,7 @@ typora-root-url: ..\..\images\
      - 저장매체에 있는 것을 메모리에 올려놓고 CPU가 그걸 처리하는 방식.
      - 예전 컴퓨터 방식에 비해 구성이 효율적임(범용적임). 소프트웨어만 교체하면 하드웨어 교체 없이 다양한 프로그램 및 작업이 가능하기 때문.
 
-     ![ph](..\images\ph.png)
+     ![ph](..\..\images\ph.png)
 
 2. 컴퓨터 3대 주요 구성요소
    - CPU(중앙처리장치): 연산, 제어
@@ -36,29 +36,29 @@ typora-root-url: ..\..\images\
 
 - AND & OR
 
-![and&or](..\images\and&or.PNG)
+![and&or](..\..\images\and&or.PNG)
 
 - NOT
 
-![not](..\images\not.PNG)
+![not](..\..\images\not.PNG)
 
 - NAND & NOR
 
-![nand&nor](..\images\nand&nor.PNG)
+![nand&nor](..\..\images\nand&nor.PNG)
 
 - 부울대수식
 
-![부울대수식](..\images\부울대수식.png)
+![부울대수식](..\..\images\부울대수식.png)
 
 ### 2) 가산
 
-- 반가산기: 두 bit를 덧셈하는 가산기. <br>이진수 덧셈을 표현한다고 가정하면<br> ![hadder](..\images\hadder.PNG) <br>이런 결과가 나와야 함. (+자릿수 1을 더하는 것을 carry라고 함) 이런 결과를 만들기 위한 회로 구성을 고민한다면
+- 반가산기: 두 bit를 덧셈하는 가산기. <br>이진수 덧셈을 표현한다고 가정하면<br> ![hadder](..\..\images\hadder.PNG) <br>이런 결과가 나와야 함. (+자릿수 1을 더하는 것을 carry라고 함) 이런 결과를 만들기 위한 회로 구성을 고민한다면
 
-  ![11](..\images\11.PNG) ![22](..\images\22.PNG)
+  ![11](..\..\images\11.PNG) ![22](..\..\images\22.PNG)
 
   첫째자리는 XOR Gate, 둘째자리는 AND Gate를 사용하면 계산이 가능함. <br>====> 1bit끼리의 계산을 통해 이진수 덧셈을 할 수 있게 됨.<br>
 
-- 전가산기: 두 bit 외에 carry까지 계산할 수 있음.<br>![fadder](..\images\fadder.png)<br>
+- 전가산기: 두 bit 외에 carry까지 계산할 수 있음.<br>![fadder](..\..\images\fadder.png)<br>
 
 - n비트 가산기: 전가산기 n개를 연결해서 조합하면 n-bit 계산이 가능해짐.<br>**====> 이러한 회로구성을 계속 붙여가며 연산, 데이터 저장 등이 가능해짐!!!**
 
@@ -86,7 +86,7 @@ typora-root-url: ..\..\images\
 
 - 레지스터: CPU 안의 일시 저장장치(1 Cycle)<br>
 
-  ![register](..\images\register-165554697586511.PNG)
+  ![register](..\..\images\register-165554697586511.PNG)
 
 **<u>=> 각 저장장치마다 접근시간이 다르기 때문에, 필요한 데이터를 어느 위치에 두고 처리하는 지에 따라서 처리 속도가 달라짐!!</u>**
 
@@ -130,7 +130,7 @@ typora-root-url: ..\..\images\
 
 ### - 파이프 라인
 
-: 하나의 작업이 필요한 일을 세부적으로 나누어서 동시에 다른 세부작업을 실행하는 기법.![pip](..\images\pip.PNG)
+: 하나의 작업이 필요한 일을 세부적으로 나누어서 동시에 다른 세부작업을 실행하는 기법.![pip](..\..\images\pip.PNG)
 
 **CPU게이트와 인텔의 보안 패치?* - 인텔이 보안이슈가 있어서 패치를 진행하였는데, 성능이 많이 저하되었음. 이유는, 파이프라인 거의 끝에서 보안이슈를 검토하고, 이슈가 생기면 전체 취소가 되었기 때문.(줄 서서 실행하고 있던 코드들이 다 취소가 되어 그만큼 비효율이 발생)
 
