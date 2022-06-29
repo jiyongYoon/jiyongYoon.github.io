@@ -99,6 +99,50 @@ for문: O(N)
 ---- 코딩 시작 ----
 ```
 
+```java
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+
+public class Practice087 {
+    static int n, k;
+    static int[] arr;
+    public static void solution() {
+        int left = 0;
+        int right = k - 1;
+        int maxTemp = Integer.MIN_VALUE;
+        int sum = 0;
+        for (int i = 0; i < k; i++) {
+            sum += arr[i];
+        }
+        maxTemp = Math.max(maxTemp, sum);
+
+        while(right < arr.length - 1) {
+            sum += arr[++right];
+            sum -= arr[left++];
+            maxTemp = Math.max(maxTemp, sum);
+        }
+        System.out.println(maxTemp);
+    }
+
+
+    public static void main(String[] args) throws IOException {
+        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+        String[] s = br.readLine().split(" ");
+        n = Integer.parseInt(s[0]);
+        k = Integer.parseInt(s[1]);
+        arr = new int[n];
+        String[] s2 = br.readLine().split(" ");
+        for (int i = 0; i < arr.length; i++) {
+            arr[i] = Integer.parseInt(s2[i]);
+        }
+        solution();
+    }
+}
+```
+
+
+
 ------
 
-> 마지막 수정일시: 2022-06-29 12:36
+> 마지막 수정일시: 2022-06-29 13:14
