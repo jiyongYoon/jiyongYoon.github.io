@@ -129,7 +129,7 @@ public class test2 {
 
   - ### 접근 제어자 복습
   
-    ![access-modifier](..\images\access-modifier.PNG)
+    ![access-modifier](..\..\images\access-modifier.PNG)
 
 ------
 
