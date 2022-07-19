@@ -3,6 +3,7 @@ title: "웹 서버"
 layout: single
 categories: server
 typora-root-url: ..\..\images\
+toc: true
 ---
 
 ## 1. 서버

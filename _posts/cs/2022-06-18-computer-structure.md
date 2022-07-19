@@ -3,6 +3,7 @@ title: "컴퓨터구조"
 layout: single
 categories: cs
 typora-root-url: ..\..\images\
+toc: true
 ---
 
 ## 1)  컴퓨터 3대 구성요소

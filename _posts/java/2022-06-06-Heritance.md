@@ -3,6 +3,7 @@ title: "[객체지향] 상속(Heritance) (다형성, 추상클래스, 인터페�
 layout: single
 categories: java
 typora-root-url: ..\..\images\
+toc: true
 ---
 
 # [객체지향] 상속(Heritance) (다형성, 추상클래스, 인터페이스)

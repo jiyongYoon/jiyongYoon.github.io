@@ -3,6 +3,7 @@ title: "코딩테스트 준비"
 layout: single
 categories: coding_test
 typora-root-url: ..\..\images\
+toc: true
 ---
 
 이번 본문은 유튜브 영상을 보며 필요한 내용을 정리한 글입니다.
