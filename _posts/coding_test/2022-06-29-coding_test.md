@@ -21,10 +21,10 @@ tag: [coding_test]
 - 시뮬레이션
 - 투포인터
 - 이진탐색
-- Greedy
+- [Greedy](https://jiyongyoon.github.io/tags/#greedy)
 - DP
-- MST
-- 다익스트라
+- [MST](https://jiyongyoon.github.io/tags/#mst)
+- [다익스트라](https://jiyongyoon.github.io/tags/#dijkstra)
 - 플로이드
 
 ## 2. 코딩 테스트 푸는 방법 **중요*
