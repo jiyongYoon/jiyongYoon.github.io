@@ -1,7 +1,7 @@
 ---
 layout: single
 title: "[IntelliJ] 깃허브 로컬데이터와 인텔리제이 탐색기 데이터가 다른 경우"
-categories: github_blog
+categories: IDE
 typora-root-url: ..\..\images\
 toc: true
 ---
