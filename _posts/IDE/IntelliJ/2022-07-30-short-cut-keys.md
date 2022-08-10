@@ -38,6 +38,8 @@ toc: true
 | Ctrl + Y                     | 코드 한 줄 삭제                   | 삭제할 줄에 커서 위치 |
 | Alt + Shift + 방향키(위아래) | 해당 줄을 (위아래)로 이동         | 이동할 줄에 커서 위치 |
 | Ctrl + Shift + Enter         | 객체 생성 시 ';'까지 추가         |                       |
+| F2                           | 오류난 곳으로 커서 이동           |                       |
+| Alt + Enter                  | import                            |                       |
 
 
 
