@@ -1,5 +1,5 @@
 ---
-title: "Java에서 Spring으로"
+title: "3. Java에서 Spring으로"
 layout: single
 categories: Spring
 typora-root-url: ..\..\images\
