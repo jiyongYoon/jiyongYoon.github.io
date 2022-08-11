@@ -13,7 +13,7 @@ toc: true
 
 # 4. Spring Container와 Bean
 
-[ 정리 한 문장: Spring도 인터페이스(BeanFactory, ApplicationContext)와 구현체(ApplicationConfigApplicationContext)를 사용해 컨테이너와 빈을 사용한다! ]
+[ 정리 한 문장: Spring도 인터페이스(`BeanFactory`, `ApplicationContext`)와 구현체(`ApplicationConfigApplicationContext`)를 사용해 컨테이너와 빈을 사용한다! ]
 
 ------
 
@@ -33,7 +33,7 @@ toc: true
   ApplicationContext applicationContext = new AnnotationConfigApplicationContext(AppConfig.class);
   ```
 
-  - AnnotationConfigApplicationContext는 ApplicationContext 인터페이스의 구현체.
+  - `AnnotationConfigApplicationContext`는 `ApplicationContext` 인터페이스의 구현체.
 
   - 파라미터로 구성(설정)정보가 담겨있는 클래스를 전달받는다.
 
@@ -42,7 +42,7 @@ toc: true
 - ### 스프링 컨테이너 생성과정
 
   1. `new AnnotationConfigApplicationContext(---.class);` 를 통해 스프링 컨테이너 생성.
-  2. 컨테이너는 {빈 이름 : 빈 객체 } 의 key : value 형태로 구성되며, 빈 이름은 메서드 이름, 빈 객체는 메서드 안에서 생성되어 리턴된 객체를 담음. (빈 이름은 `@Bean(name="새로운이름")` 으로 새로 부여 가능) <br>** 빈 이름은 항상 달라야 함! 아니면 값이 덮이거나 설정 오류 발생*
+  2. 컨테이너는 {빈 이름 : 빈 객체 } 의 key : value 형태로 구성되며, 빈 이름은 메서드 이름, 빈 객체는 메서드 안에서 생성되어 리턴된 객체를 담음. (빈 이름은 `@Bean(name="새로운이름")` 으로 새로 부여 가능) <br>**빈 이름은 항상 달라야 함! 아니면 값이 덮이거나 설정 오류 발생*
   3. 파라미터로 전달받은 클래스에 접근하여 코드를 읽어 Bean을 이름 : 객체 형태로 저장.
   4. 구성(설정) 정보를 참고하여 의존관계까지 주입함. (개념상 그렇지만, AppConfig와 같이 직접 등록하는 경우에는 빈 생성과 의존관계 주입이 한번에 처리되기도 함)
 
@@ -156,5 +156,3 @@ toc: true
 ------
 
 > 마지막 수정일시: 2022-08-11 14:10
-
-## 
