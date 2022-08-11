@@ -1,5 +1,5 @@
 ---
-title: "3. Java에서 Spring으로"
+title: "Java에서 Spring으로"
 layout: single
 categories: Spring
 typora-root-url: ..\..\images\
@@ -52,7 +52,7 @@ Java에서 Spring으로 넘어가는 단계. 순서는 Pure-java로 만들어보
   }
   ```
 
-  - **실행 클래스: OrderApp**
+- **실행 클래스: OrderApp**
 
   ```java
   public static void main(String[] args) {
