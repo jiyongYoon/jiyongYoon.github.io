@@ -1,5 +1,5 @@
 ---
-title: "1. 객체지향 설계와 스프링"
+title: "①. 객체지향 설계와 스프링"
 layout: single
 categories: Spring
 typora-root-url: ..\..\images\
