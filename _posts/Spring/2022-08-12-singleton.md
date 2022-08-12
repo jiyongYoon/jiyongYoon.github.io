@@ -65,7 +65,7 @@ public class SingletonTest {
 }
 ```
 
-![singleton-](/singleton-.PNG)
+![singleton-](..\..\images\singleton-.PNG)
 
 - 핵심은 외부에서 객체를 생성하는 메서드나 변수에 접근하지 못하게 private로 막아놓고, 객체는 get으로만 가져가서 사용할 수 있도록 하는 것.
 - 객체는 static이라 메모리에 하나 올려둠.
@@ -94,7 +94,7 @@ System.out.println("memberService2 = " + memberService2);
 Assertions.assertThat(memberService1).isSameAs(memberService2); 
 ```
 
-![spring-singleton](/spring-singleton.PNG)
+![spring-singleton](..\..\images\spring-singleton.PNG)
 
 
 
@@ -156,7 +156,7 @@ public class StatefulService {
 
 - Spring 컨테이너는 어떻게 객체를 1개로 관리할까? `AppConfig`를 @Configuration 으로 등록해놓은 상태에서 클래스타입을 확인해보자.
 
-![appconfig.class](/appconfig.class.PNG)
+![appconfig.class](..\..\images\appconfig.class.PNG)
 
 - AppConfig Bean의 클래스타입을 확인해보면 `.AppConfig$$EnhancerBySpringCGLIB$$~~` 이라고 되어 있다. 왜 그냥 AppConfig가 아니라 뒤에 뭐가 더 붙은걸까?
 
