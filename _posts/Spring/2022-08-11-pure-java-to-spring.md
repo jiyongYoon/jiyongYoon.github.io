@@ -203,13 +203,14 @@ Java에서 Spring으로 넘어가는 단계. 순서는 Pure-java로 만들어보
       public MemberService memberService() {
           return new MemberServiceImpl(getMemberRepository());
       }
+      
       @Bean
       public OrderService orderService() {
           return new OrderServiceImpl(getMemberRepository(), discountPolicy());
       }
   }
   ```
-
+  
   ```java
   public static void main(String[] args) {
   //    AppConfig appConfig = new AppConfig();
@@ -227,7 +228,7 @@ Java에서 Spring으로 넘어가는 단계. 순서는 Pure-java로 만들어보
       System.out.println(order.calculatePrice());
   }
   ```
-
+  
   
 
 ------
