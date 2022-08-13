@@ -212,20 +212,20 @@ Java에서 Spring으로 넘어가는 단계. 순서는 Pure-java로 만들어보
 
   ```java
   public static void main(String[] args) {
-  //        AppConfig appConfig = new AppConfig();
-  //        OrderService orderService = appConfig.orderService();
+  //    AppConfig appConfig = new AppConfig();
+  //    OrderService orderService = appConfig.orderService();
   
-          ApplicationContext applicationContext = new AnnotationConfigApplicationContext(AppConfig.class);
-          MemberService memberService = applicationContext.getBean("memberService", MemberService.class);
-          OrderService orderService = applicationContext.getBean("orderService", OrderService.class);
+      ApplicationContext applicationContext = new AnnotationConfigApplicationContext(AppConfig.class);
+      MemberService memberService = applicationContext.getBean("memberService", MemberService.class);
+      OrderService orderService = applicationContext.getBean("orderService", OrderService.class);
   
-          Long memberId = 1L;
-          
-          Order order = orderService.createOrder(memberId, "itemA", 15000);
+      Long memberId = 1L;
   
-          System.out.println(order);
-          System.out.println(order.calculatePrice());
-      }
+      Order order = orderService.createOrder(memberId, "itemA", 15000);
+  
+      System.out.println(order);
+      System.out.println(order.calculatePrice());
+  }
   ```
 
   
