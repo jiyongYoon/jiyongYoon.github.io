@@ -135,6 +135,7 @@ public class MemberDto {
         <h1> 관리자 회원관리 페이지</h1>
         <div th:replace="/fragments/layout.html :: fragment-admin-menu"></div>
         <hr/>
+        <!-- 이 부분은 페이지 내 리스트에서 검색기능 -->
         <div class="list">
             <div class="search-form">
                 <form method="get">
