@@ -150,7 +150,7 @@ public class MemberDto {
                 </form>
             </div>
 
-
+			<!-- 이 부분은 페이지 내 리스트에 DB 회원목록 구현부 -->
             <table>
                 <thead>
                     <tr>
@@ -208,7 +208,7 @@ public class MemberServiceImpl implements MemberService {
         List<MemberDto> list = memberMapper.selectList(parameter);
         return list;
 
-//        return memberRepository.findAll(); // 모든 것 가져오기
+//        return memberRepository.findAll(); // 모든 것 가져오기 -> 그냥 다 가져오는곳, 위 메서드는 mybatis 사용하여 쿼리로 가져옴.
     } 
 }
 ```
