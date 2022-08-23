@@ -258,7 +258,7 @@ public interface MemberMapper {
 
 - `@AdminMemberController` - `@GetMapping`으로 클라이언트 요청을 `MemberParam parameter`에 받아서 `memberService.list()`에 전달하고, 처리된 결과를 `model.addAttribute()`를 통해 리스트에 담아서 `list.html`에 반환함.
 - `MemberServiceImpl`- 컨트롤러가 전달한 `MemberParam parameter`를 `Mapper.xml`을 통해 쿼리수행을 하여 DB에 있는 리스트를 가져온 후, 리스트를 반환함.
-- `MemberMapper.xml` - <select></select> 내부의 조건에 맞는 쿼리를 실행함.
+- `MemberMapper.xml` - `<select> </select>` 내부의 조건에 맞는 쿼리를 실행함.
 
 ------
 
