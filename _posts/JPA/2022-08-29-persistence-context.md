@@ -1,5 +1,5 @@
 ---
-title: "2. 영속성 관리와 컨텍스트(PersistenceContext)"
+title: "②. 영속성 관리와 컨텍스트(PersistenceContext)"
 layout: single
 categories: JPA
 typora-root-url: ..\..\images\
