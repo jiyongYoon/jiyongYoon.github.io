@@ -52,8 +52,7 @@ toc: true
    !**/src/main/**/out/
    !**/src/test/**/out/
    application-secret.properties <- 추가
-
-
+   ```
 
 ------
 
