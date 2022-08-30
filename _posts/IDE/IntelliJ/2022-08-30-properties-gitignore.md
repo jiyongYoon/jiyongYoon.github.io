@@ -42,7 +42,7 @@ toc: true
 
 4. .gitignore에 숨길 파일을 등록한다.
 
-   ```
+   ```yaml
    ### IntelliJ IDEA ###
    .idea
    *.iws
