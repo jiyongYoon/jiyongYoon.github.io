@@ -16,7 +16,7 @@ toc: true
 
 # 4. 연관관계 매핑
 
-이 강의를 제대로 이해하기 위해 관계형 DB에 대해서 더 공부하고 왔다.
+이 강의를 제대로 이해하기 위해 [관계형 DB](https://jiyongyoon.github.io/database/RDB/)에 대해서 더 공부하고 왔다.
 
 ------
 
