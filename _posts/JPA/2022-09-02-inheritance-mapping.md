@@ -1,7 +1,7 @@
 ---
 title: "⑥. 고급 매핑 - 상속관계와 MappedSuperclass"
 layout: single
-categories: Database
+categories: JPA
 typora-root-url: ..\..\images\
 toc: true
 ---
