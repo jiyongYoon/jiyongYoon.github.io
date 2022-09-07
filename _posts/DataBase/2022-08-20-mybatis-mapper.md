@@ -1,7 +1,7 @@
 ---
 title: "MyBatis와 Mapper"
 layout: single
-categories: Web
+categories: DataBase
 typora-root-url: ..\..\images\
 toc: true
 ---

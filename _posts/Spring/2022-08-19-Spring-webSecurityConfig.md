@@ -1,7 +1,7 @@
 ---
 title: "스프링 웹 시큐리티로 로그인&로그아웃 구현"
 layout: single
-categories: Web
+categories: Spring
 typora-root-url: ..\..\images\
 toc: true
 ---

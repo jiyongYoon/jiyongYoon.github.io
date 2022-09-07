@@ -1,7 +1,7 @@
 ---
 title: "메일을 활용한 비밀번호 초기화"
 layout: single
-categories: Web
+categories: Spring
 typora-root-url: ..\..\images\
 toc: true
 ---
