@@ -19,28 +19,29 @@ toc: true
 ![예외 클래스 계층도](..\..\images\img_java_exception_class_hierarchy.png)(사진출처: [TCP스쿨](http://www.tcpschool.com/java/java_exception_class))
 
 - 파란색은 `Checked Exception`
-
 - 주황색은 `Unchecked Exception`
+  - 커스텀 exception은 `Unchecked Exception
 
-  - 커스텀 exception은 `Unchecked Exception`
+|                      | Checked Exception                                            | Unchecked Exception                                          |
+| -------------------- | ------------------------------------------------------------ | ------------------------------------------------------------ |
+| 처리여부             | 반드시 예외처리 필요<br />(문법적으로 오류가 있는 등의 예외이기 때문에 컴파일 시점에서 체크가 가능) | 명시적 처리 강제하지 않음<br />(데이터가 잘 들어올 것을 가정하고 코드를 구성하기 때문에 실행 중에 체크가 됨) |
+| 확인시점             | **컴파일 단계** <u>(그 외 Exception)</u>)                    | 실행 중 단계 <u>(RuntimeException)</u>                       |
+| 예외발생 시 트랜잭션 | 롤백하지 않음                                                | 롤백함                                                       |
+| 예시                 | IOException<br />SQLException                                | NullPointerException<br />IndexOutOfBoundException<br />IllegalArgumentException |
 
-  |                      | Checked Exception                                            | Unchecked Exception                                          |
-  | -------------------- | ------------------------------------------------------------ | ------------------------------------------------------------ |
-  | 처리여부             | 반드시 예외처리 필요<br />(문법적으로 오류가 있는 등의 예외이기 때문에 컴파일 시점에서 체크가 가능) | 명시적 처리 강제하지 않음<br />(데이터가 잘 들어올 것을 가정하고 코드를 구성하기 때문에 실행 중에 체크가 됨) |
-  | 확인시점             | **컴파일 단계** <u>(그 외 Exception)</u>)                    | 실행 중 단계 <u>(RuntimeException)</u>                       |
-  | 예외발생 시 트랜잭션 | 롤백하지 않음                                                | 롤백함                                                       |
-  | 예시                 | IOException<br />SQLException                                | NullPointerException<br />IndexOutOfBoundException<br />IllegalArgumentException |
 
-  
 
 # 2. Springboot의 예외 처리 방식
 
-- `@ControllerAdvice` / `@RestControllerAdvice` 를 사용하여 모든 `Controller`에서 발생할 수 있는 예외 처리
+### 1)  `@ControllerAdvice` / `@RestControllerAdvice`
 
+- `@ControllerAdvice` / `@RestControllerAdvice` 를 사용하여 모든 `Controller`에서 발생할 수 있는 예외 처리
   - `@RestControllerAdvice(basePackages="패키지위치")`와 같이 설정을 통해 범위지정이 가능. (디폴트는 모든 Controller)
   - json 형태로 결과를 반환하려면 `@RestController` 사용.
   - 두 어노테이션 모두 `@Component`가 달려 있어서 부트시 자동으로 Bean 등록이 됨.
   - 보통 클래스에 달아서 사용함.
+
+### 2)  `@ExceptionHandler`
 
 - `@ExceptionHandler`를 통한 특정 `Controller`의 예외 처리(발생하는 예외마다 처리할 메서드를 정의)
 
