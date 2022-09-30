@@ -16,7 +16,7 @@ toc: true
 
 # 1. Java의 예외 클래스
 
-![예외 클래스 계층도](/img_java_exception_class_hierarchy.png)(사진출처: [TCP스쿨](http://www.tcpschool.com/java/java_exception_class))
+![예외 클래스 계층도](..\..\images\img_java_exception_class_hierarchy.png)(사진출처: [TCP스쿨](http://www.tcpschool.com/java/java_exception_class))
 
 - 파란색은 `Checked Exception`
 
