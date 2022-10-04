@@ -321,7 +321,7 @@ toc: true
 
 ## - *Spring Security 어플리케이션의 Controller Test
 
-- `Principal` 세션에서 유저정보 가져오기 예시
+- `Principal` 세션에서 유저권한 가져오기 예시
 
   ```java
   @Test
@@ -333,10 +333,10 @@ toc: true
   
   //when
   mockMvc.perform(
-  get("/user/detail")
-  .principal(testingAuthenticationToken))
-  .andExpect(status().isOk())
-  .andDo(print());
+      get("/user/detail")
+          .principal(testingAuthenticationToken))
+      .andExpect(status().isOk())
+      .andDo(print());
   ArgumentCaptor<String> captor = ArgumentCaptor.forClass(String.class);
   
   //then
@@ -351,7 +351,135 @@ toc: true
   - `TestingAuthenticationToken`으로 유저 정보 담기.
   - get(), post() 메서드 뒤에 `.principal(testingAuthenticationToken)`으로 시큐리티 통과시키기.
 
+- `@WithMockUser` 어노테이션 사용
 
+  - Mock유저를 사용하여 테스트 진행. 단, 이때는 Default값이 `username = "user"`, `password = "password"`, `role = "ROLE_USER"`임.
+  - 변경을 하고 싶으면 어노테이션 뒤에 (`username = `, `password = `, `role = `)을 붙여주면 됨.
+
+  ```java
+  @Test
+  @WithMockUser(username = "01012345678", password = "testPassword")
+  void test() {
+     mockMvc.perform(
+            post("/baby/add")
+                .content(babyInputJson)
+                .principal(testingAuthenticationToken)
+                .contentType(MediaType.APPLICATION_JSON))
+            .andExpect(status().isOk())
+            .andDo(print());
+  }
+  ```
+
+  ```java
+  // andDo(print())시 MockHttpServletRequest에 담기는 내용.
+  MockHttpServletRequest:
+        HTTP Method = POST
+        Request URI = /baby/add
+         Parameters = {}
+            Headers = [Content-Type:"application/json", Content-Length:"121"]
+               Body = <no character encoding set>
+      Session Attrs = {SPRING_SECURITY_CONTEXT=SecurityContextImpl [Authentication=UsernamePasswordAuthenticationToken [Principal=org.springframework.security.core.userdetails.User [Username=01012345678, Password=[PROTECTED], Enabled=true, AccountNonExpired=true, credentialsNonExpired=true, AccountNonLocked=true, Granted Authorities=[ROLE_USER]], Credentials=[PROTECTED], Authenticated=true, Details=null, Granted Authorities=[ROLE_USER]]]}
+  // Principal의 User객체에 username, password, Granted Authorities로 담긴다.
+  ```
+
+  - `@WithMockUser`가 사용하는 `WithMockUserSecurityContextFaxtory`
+
+  ```java
+  final class WithMockUserSecurityContextFactory implements
+          WithSecurityContextFactory<WithMockUser> {
+  
+      public SecurityContext createSecurityContext(WithMockUser withUser) {
+          String username = StringUtils.hasLength(withUser.username()) ? withUser
+                  .username() : withUser.value();
+          if (username == null) {
+              throw new IllegalArgumentException(withUser
+                      + " cannot have null username on both username and value properites");
+          }
+  
+          List<GrantedAuthority> grantedAuthorities = new ArrayList<>();
+          for (String authority : withUser.authorities()) {
+              grantedAuthorities.add(new SimpleGrantedAuthority(authority));
+          }
+  
+          if (grantedAuthorities.isEmpty()) {
+              for (String role : withUser.roles()) {
+                  if (role.startsWith("ROLE_")) {
+                      throw new IllegalArgumentException("roles cannot start with ROLE_ Got "
+                              + role);
+                  }
+                  grantedAuthorities.add(new SimpleGrantedAuthority("ROLE_" + role));
+              }
+          } else if (!(withUser.roles().length == 1 && "USER".equals(withUser.roles()[0]))) {
+              throw new IllegalStateException("You cannot define roles attribute "+ Arrays.asList(withUser.roles())+" with authorities attribute "+ Arrays.asList(withUser.authorities()));
+          }
+  
+          User principal = new User(username, withUser.password(), true, true, true, true,
+                  grantedAuthorities);
+          Authentication authentication = new UsernamePasswordAuthenticationToken(
+                  principal, principal.getPassword(), principal.getAuthorities());
+          SecurityContext context = SecurityContextHolder.createEmptyContext();
+          context.setAuthentication(authentication);
+          return context;
+      }
+  }
+  ```
+
+  
+
+- `@WithAnonymousUser` 어노테이션
+
+  - 무작위 유저로 테스트하는 경우 사용.
+  - 일부 메서드만 이렇게 테스트하고자 할때 유용.
+
+  
+
+- `@WithSecurityContext` 어노테이션
+
+  - 직접 `SecurityContext`를 만들 수 있는 커스텀 어노테이션을 만들 수 있음. 이를 통해 CustomUser를 사용할 수 있음.
+
+  ```java
+  // WithMockCustmoerUser.java
+  
+  @Retention(RetentionPolicy.RUNTIME)
+  @WithSecurityContext(factory = WithMockCustomUserSecurityContextFactory.class)
+  public @interface WithMockCustomUser {
+      String username() default "Test UserName";
+      String name() default "Test Name";
+  }
+  ```
+
+  - 직접 `SecurityContextFactory`도 구현해 주어야 함.
+
+  ```java
+  // WithMockCustomerUserSecurityContextFactory.java
+  
+  public class WithMockCustomUserSecurityContextFactory implements 
+      WithSecurityContextFactory<WithMockCustomUser> {
+      @Override
+      public SecurityContext createSecurityContext(WithMockCustomUser customUser) {
+          SecurityContext context = SecurityContextHolder.createEmptyContext();
+  
+          UserContext userContext = new UserContext(1L, "aabb", customUser.username(), customUser.role());
+          PostAuthorizationToken token = new PostAuthorizationToken(userContext);
+  
+          context.setAuthentication(token);
+  
+          return context;
+      }
+  }
+  ```
+
+  - 이렇게 만들었을 때의 `@WithMockCustomerUser` 테스트
+
+  ```java
+  @Test
+  @WithMockCustomUser(role = "ROLE_ADMIN") // 내가 테스트하고자하는 role 입력
+  void methodName() {
+      
+  }
+  ```
+
+  
 
 
 
@@ -558,4 +686,4 @@ class UserServiceImplTest {
 
 ------
 
-> 마지막 수정일시: 2022-09-27 18:38
+> 마지막 수정일시: 2022-10-04 01:08
