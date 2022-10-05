@@ -6,8 +6,6 @@ typora-root-url: ..\..\images\
 toc: true
 ---
 
-
-
 ![image-20221004134750381](..\..\images\image-20221004134750381.png)
 
 ERD를 보고 크게 두 부분으로 프로젝트 구성을 나누기로 했다.
