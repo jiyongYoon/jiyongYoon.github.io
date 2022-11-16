@@ -39,6 +39,9 @@ netstat -t (TCP 연결 표시)
 netstat -p (port 표시)
 netstat -n(서비스 이름대신 port번호 표시)
 netstat -ltup 이런식으로 합쳐서 사용가능
+
+# 포트 및 서비스 확인 2
+lsof -i:포트번호
 ```
 
 # 2. java 관련
