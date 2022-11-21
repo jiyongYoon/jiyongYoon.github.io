@@ -14,8 +14,6 @@ toc: true
 - `T findById()` : T 반환. 없으면 null 반환
 - `Optional<T> findById()` : Optional 반환. 없으면 Optional empty 반환
 
-### 
-
 # 2. 삭제
 
 ### - delete()
