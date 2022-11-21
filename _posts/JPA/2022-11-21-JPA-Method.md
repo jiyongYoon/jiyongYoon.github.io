@@ -72,12 +72,12 @@ public <S extends T> S save(S entity) {
 ### - findBy프로퍼티(값)
 
 - 프로퍼티가 특정 값인 대상
-  - ex) List<User> <u>findBy</u>Name(String name)
-  - ex) List<User> <u>findBy</u>Name<u>And</u>Grade(String name, Grade g)
+  - `List<User> <u>findBy</u>Name(String name)`
+  - `List<User> <u>findBy</u>Name<u>And</u>Grade(String name, Grade g)`
 - 프로퍼티가 조건 비교인 경우 (Like, After, Between, LessThan, IsNull 등...)
-  - ex) List<User> <u>findBy</u>Name<u>Like</u>(String keyword)
+  - `List<User> <u>findBy</u>Name<u>Like</u>(String keyword)`
 - 모두 조회
-  - ex) findAll()
+  - `findAll()`
 
 
 
