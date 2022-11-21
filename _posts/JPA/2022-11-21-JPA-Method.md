@@ -12,7 +12,10 @@ toc: true
 ### - findById()
 
 - `T findById()` : T 반환. 없으면 null 반환
+
 - `Optional<T> findById()` : Optional 반환. 없으면 Optional empty 반환
+
+  
 
 # 2. 삭제
 
@@ -21,6 +24,8 @@ toc: true
 - `void delete(T)` : 엔티티를 삭제함.
 - `void deleteById()` : 내부적으로 findById()를 한 후 엔티티를 조회하여 deletd()로 삭제함.
 - *주의* - 삭제할 대상이 존재하지 않는 경우 익셉션 발생
+
+
 
 
 
@@ -60,6 +65,8 @@ public <S extends T> S save(S entity) {
 
 
 
+
+
 # 4. 특정 조건으로 찾기
 
 ### - findBy프로퍼티(값)
@@ -71,6 +78,8 @@ public <S extends T> S save(S entity) {
   - ex) List<User> <u>findBy</u>Name<u>Like</u>(String keyword)
 - 모두 조회
   - ex) findAll()
+
+
 
 # 5. 기타
 
