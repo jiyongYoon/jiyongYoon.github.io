@@ -111,23 +111,50 @@ docker run -p 8080:8080 이미지명
 4. 도커 이미지 실행
 
    ```shell
-   docker run (-d) -p 8080:8080 --name 컨테이너이름(처음 실행 시 붙여줄 이름) 이미지명 (-d는 백그라운드 실행)
+   docker run (-d) -p 8080:8080 --name 컨테이너이름(처음 실행 시 붙여줄 이름) 이미지ID (-d는 백그라운드 실행)
+   ```
+
+   ```shell
+   # 해당 레포지토리에 특정되는 이미지가 하나일 경우 사용가능하며, 이 경우 tag가 latest로 실행됨. -> Repository:latest로
+   docker run (-d) -p 8080:8080 --name 컨테이너이름(처음 실행 시 붙여줄 이름) 레포지토리
+   
+   # 해당 레포지토리에 특정되는 이미지가 없을 경우(즉 여러개 있을 경우) 이미지를 특정해주어야 함.
+   docker run (-d) -p 8080:8080 --name 컨테이너이름(처음 실행 시 붙여줄 이름) 레포지토리/tag이름
    ```
 
 5. 컨테이너 실행
 
    ```shell
-   docker (container) start [옵션] <컨테이너 식별자> [컨테이너 식별자]
+   docker (container) start 컨테이너 ID
    ```
 
 6. 컨테이너 정지
 
    ```shell
-   docker (container) stop [옵션] <컨테이너 식별자> [컨테이너 식별자]
+   docker (container) stop 컨테이너 ID
+   ```
+
+7. 컨테이너 확인
+
+   ```shell
+   docker ps # 실행중인 도커 컨테이너
+   docker ps -a # 전체 컨테이너
+   ```
+
+8. 컨테이너 접속
+
+   ```shell
+   docker attach 컨테이너ID
+   ```
+
+9. 컨테이너 삭제
+
+   ```shell
+   docker rm 컨테이너ID
    ```
 
    
 
 ------
 
-> 마지막 수정일시: 2022-11-16 11:00
+> 마지막 수정일시: 2022-11-25 22:00
