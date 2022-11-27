@@ -20,17 +20,23 @@ toc: true
 
 - `Java Runtime Environment` 위에서 동작하는 자동화 서버. 빌드, 테스트, 배포 등의 것을 자동화 해주는 자동화 서버.
 
+- 설치하여 url로 접속하면 UI화면이 나와 설정 및 관리가 편함!!
+
 - 다양한 플러그인을 통합하여 자동화 하는 원리.
 
   - `Git Plugin` 
     - 깃헙에서 소스코드를 가지고 올때 사용함.
   - `PipeLine` 
     - 일련의 자동화 작업의 순서들의 집합인 `PipeLine`을 통해서 자동화함. Jenkins의 핵심.
+    - 좌측 메뉴바의 `새로운 Item` - `Pipeline`을 누르면 새로 파이프라인을 만들 수 있음.
   - `Credentials Plugin`
     - 배포에 필요한 각종 리소스(클라우드 리소스, ssh 키, AWS token, Git Access token 등)를 저장하고 관리해주는 플러그인
+    - 좌측 메뉴바의 `Credentials` - `System` - `Global credentials`
+      - 추가를 희망하면 `Add Credentials`
+      - 종류(Kind)를 선택할 수 있으며, properties처럼 값을 넘겨주기 위해서는 `Secret text`를 통해서 `Secret`에는 값을 넣고, `ID`에는 Jenkins Job Config에서 보여줄 이름을 등록함.
   - `Docker Plugin`
     - 도커를 사용하기 위한 플러그인.
-
+  
   
 
 # 3. PipeLine?
@@ -108,8 +114,26 @@ toc: true
   }
   ```
 
-  
+
+
+
+- 참고자료 및 관련링크
+  - [토크ON세미나](https://youtu.be/GOLHN3FHjpI)
+  - [젠킨스로 빌드-배포하기](https://velog.io/@junho5336/jenkins%EB%A1%9C-%EB%B9%8C%EB%93%9C-%EB%B0%B0%ED%8F%AC%ED%95%98%EA%B8%B0#jenkins-%EC%8B%9C%EC%8A%A4%ED%85%9C%EC%84%A4%EC%A0%95)
+  - [젠킨스 파이프라인을 활용한 배포 자동화](https://velog.io/@sihyung92/%EC%9A%B0%EC%A0%A0%EA%B5%AC2%ED%8E%B8-%EC%A0%A0%ED%82%A8%EC%8A%A4-%ED%8C%8C%EC%9D%B4%ED%94%84%EB%9D%BC%EC%9D%B8%EC%9D%84-%ED%99%9C%EC%9A%A9%ED%95%9C-%EB%B0%B0%ED%8F%AC-%EC%9E%90%EB%8F%99%ED%99%94#%EB%B9%8C%EB%93%9C-%EC%9C%A0%EB%B0%9C%ED%95%98%EA%B8%B0)
+  - [백엔드 Jenkins CI/CD 구축기](https://seongwon.dev/DevOps/20220717-CICD%EA%B5%AC%EC%B6%95%EA%B8%B02/)
+  - [외부EC2연결](https://rbsks.tistory.com/9)
+  - [도커 이미지 빌드관련1](https://velog.io/@imsooyeon/Jenkins-pipeline%EC%9D%84-%EA%B5%AC%EC%B6%95%ED%95%98%EC%97%AC-Docker-build-%EB%B0%8F-%EC%9D%B4%EB%AF%B8%EC%A7%80-push-%ED%95%98%EA%B8%B0)
+  - [도커 이미지 빌드관련2](https://hyeinisfree.tistory.com/23)
+  - 향로 블로그
+    - [도커를 활용한 젠킨스 설치 및 세팅](https://jojoldu.tistory.com/139)
+    - [젠킨스와 Github ssh 연동](https://jojoldu.tistory.com/442)
+  - [젠킨스-슬랙설정-공식안내](https://w1661913672-14q788704.slack.com/services/B04CU2HR6GZ?added=1)
+  - [젠킨스-슬랙설정-블로그](https://junhyunny.github.io/information/jenkins/jenkins-slack-notification/)
+  - [젠킨스-깃헙웹훅연동](https://cokes.tistory.com/119)
+  - [젠킨스-깃헙웹훅연동(앱사용)](https://fwani.tistory.com/23)
+  - [젠킨스-깃헙웹훅연동(젠킨스파일사용)](https://www.youtube.com/watch?v=oFnS4dDzCD0&t=1054)
 
 ------
 
-> 마지막 수정일시: 2022-11-22 23:55
+> 마지막 수정일시: 2022-11-26 04:33
