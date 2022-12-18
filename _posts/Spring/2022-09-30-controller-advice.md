@@ -24,14 +24,15 @@ toc: true
 - 주황색은 `Unchecked Exception`
   - 커스텀 exception은 `Unchecked Exception
 
-|                      | Checked Exception                                            | Unchecked Exception                                          |
-| -------------------- | ------------------------------------------------------------ | ------------------------------------------------------------ |
-| 처리여부             | 반드시 예외처리 필요<br />(문법적으로 오류가 있는 등의 예외이기 때문에 컴파일 시점에서 체크가 가능) | 명시적 처리 강제하지 않음<br />(데이터가 잘 들어올 것을 가정하고 코드를 구성하기 때문에 실행 중에 체크가 됨) |
-| 확인시점             | **컴파일 단계** <u>(그 외 Exception)</u>)                    | 실행 중 단계 <u>(RuntimeException)</u>                       |
-| 예외발생 시 트랜잭션 | 롤백하지 않음                                                | 롤백함                                                       |
-| 예시                 | IOException<br />SQLException                                | NullPointerException<br />IndexOutOfBoundException<br />IllegalArgumentException |
+|                       | Checked Exception                                            | Unchecked Exception                                          |
+| --------------------- | ------------------------------------------------------------ | ------------------------------------------------------------ |
+| 처리여부              | 반드시 예외처리 필요<br />(문법적으로 오류가 있는 등의 예외이기 때문에 컴파일 시점에서 체크가 가능) | 명시적 처리 강제하지 않음<br />(데이터가 잘 들어올 것을 가정하고 코드를 구성하기 때문에 실행 중에 체크가 됨) |
+| 확인시점              | **컴파일 단계** <u>(그 외 Exception)</u>)                    | 실행 중 단계 <u>(RuntimeException)</u>                       |
+| 예외발생 시 트랜잭션* | 롤백하지 않음                                                | 롤백함                                                       |
+| 예시                  | IOException<br />SQLException                                | NullPointerException<br />IndexOutOfBoundException<br />IllegalArgumentException |
 
-
+- 예외발생 시 트랜젝션 처리*
+  - 이 부분은 `스프링이 제공하는 기본적인 트랜잭션 처리로직`에 기반하며, 롤백을 하거나 하지 않는 것을 사용자가 명시할 수도 있으며, 비즈니스 로직 등에 따라 롤백을 할 지 말지도 정할 수 있음.
 
 # 2. Springboot의 예외 처리 방식
 
@@ -125,4 +126,4 @@ public class ExceptionHandlerClass {
 
 ------
 
-> 마지막 수정일시: 2022-09-30 21:33
+> 마지막 수정일시: 2022-12-18 17:43
