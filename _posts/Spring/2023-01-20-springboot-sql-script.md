@@ -71,7 +71,7 @@ spring.jpa.hibernate.ddl-auto=create
 
 
 [data.sql 스크립트]
-```SQL
+```sql
 INSERT INTO Users(ID, NAME) VALUES
                 (1, 'HELLO'),
                 (2, 'WORLD'),
@@ -80,7 +80,7 @@ INSERT INTO Users(ID, NAME) VALUES
 - 테이블 생성 sql은 없어도 됨. @Entity 어노테이션을 찾아서 알아서 ddl-auto 설정을 따름.
 
 ## 참고자료
-[`springboot 공식문서`](https://docs.spring.io/spring-boot/docs/current/reference/html/howto.html#howto.data-initialization)
+[springboot 공식문서](https://docs.spring.io/spring-boot/docs/current/reference/html/howto.html#howto.data-initialization)
 
 
 ------
